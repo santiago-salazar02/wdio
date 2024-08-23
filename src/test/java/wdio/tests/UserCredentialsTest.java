@@ -39,7 +39,9 @@ public class UserCredentialsTest extends BaseTest {
         // Pre-register
         log.info("Pre-register");
         LoginMenuScreen loginMenuScreen = loadLoginMenuScreen();
+        loginMenuScreen.waitSomeSeconds(2);
         RegisterScreen registerScreen = loginMenuScreen.tapRegisterButtonSectionChanger();
+        registerScreen.waitSomeSeconds(2);
 
         registerScreen.register(randomEmail,password);
         registerScreen.waitSomeSeconds(5);
@@ -48,6 +50,7 @@ public class UserCredentialsTest extends BaseTest {
         // Go to login
         log.info("Returning to login");
         LoginScreen loginScreen = loginMenuScreen.tapLoginButtonSectionChanger();
+        loginScreen.waitSomeSeconds(2);
         log.info("Sending login keys (username and password)");
         loginScreen.login(randomEmail,password);
         log.info("Waiting for login popup");
@@ -58,8 +61,10 @@ public class UserCredentialsTest extends BaseTest {
     @Test(dataProvider = "randomCredentials")
     public void testRegister(String randomEmail, String password){
         LoginMenuScreen loginMenuScreen = loadLoginMenuScreen();
+        loginMenuScreen.waitSomeSeconds(2);
         log.info("Going to register screen");
         RegisterScreen registerScreen = loginMenuScreen.tapRegisterButtonSectionChanger();
+        registerScreen.waitSomeSeconds(2);
 
         log.info("Sending register keys (username, password and repeated password)");
         registerScreen.register(randomEmail,password);
