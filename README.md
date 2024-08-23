@@ -6,7 +6,7 @@
 * Platform version: 15.
 * Java version: openjdk-22.0.2
 * Env is inside the email.
-* You should use another path for the app path.
+* You should use another path for the app path (Dont modify the one from the .env, just in appium inspector in case you are using it).
 
 ### Json config used in Appium inspector
 {
