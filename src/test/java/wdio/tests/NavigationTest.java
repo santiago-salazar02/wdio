@@ -14,6 +14,7 @@ public class NavigationTest extends BaseTest {
     @Test
     public void testNavigationHrefs(){
         MenuScreen menuScreen = loadMenu();
+        menuScreen.waitSomeSeconds(3);
         WebViewScreen webViewScreen = menuScreen.tapWebViewHref();
         webViewScreen.waitSomeSeconds(10);
         log.info("Verifying WebView screen");

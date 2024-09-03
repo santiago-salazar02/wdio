@@ -60,17 +60,4 @@ public class DragScreen extends BaseScreen {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(9)")
     private WebElement ninthPuzzleImage;
-
-    public boolean verifyElementsVisibility(){
-        WebElement[] webElements = {
-
-        };
-        for(WebElement webElement: webElements){
-            if(!webElement.isDisplayed()){
-                return false;
-            }
-        }
-        return true;
-    }
-
 }
